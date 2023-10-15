@@ -1,0 +1,35 @@
+/* div {
+    height: 20vh;
+    border: 2px solid;
+}
+#div2 {
+    background-color: blue;
+    position: absolute;
+    margin-top: 20px;
+    width: 50vw;
+    position: fixed;
+} */
+#div1 {
+    width: 30vw;
+    height: 17vh;
+    background-color: blue;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+#round {
+    border-radius: 100%;
+    width: 12vw;
+    height: 22vh;
+    background-color: white;
+    margin-left: -10px;
+    margin-top: -126px;
+}
+#round2 {
+    background-color: yellow;
+    width: 8vw;
+    height: 18vh;
+    border-radius: 100%;
+    position: relative;
+    top: 10px;
+    left: 40px;
+}

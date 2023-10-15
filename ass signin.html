@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="Bootstrap Ass/bootstrap.css">
+        <style>
+            body {
+                background-color: #9e5ff1;
+            }
+            #contain {
+                background-color: rgb(225, 244, 250);
+                height: 75vh;
+            }
+            h1 {
+                color: white;
+                text-shadow: 2px 2px 2px #7C2AE8,-2px -2px 2px #7C2AE8;
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            #button, #button1 {
+                border: 2px solid #7C2AE8;
+                color: white;
+                font-weight: bold;
+                background-color: #7C2AE8;
+            }
+            #button:hover, #button1:hover {
+                background-color: transparent;
+                color: #7C2AE8;
+            }
+            #mail, #pass{
+                border: 2px solid #7C2AE8;
+                padding: 10px;
+            }
+            ::placeholder {
+                color: #7C2AE8 !important;
+                font-weight: bold;
+            }
+            #forgot {
+                border: 0px;
+                border-bottom: 2px solid #7C2AE8;
+                border-left: 2px solid #7C2AE8;
+                background-color: transparent;
+            }
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="contain" class="col-lg-4 col-md-4 col-sm-7 mt-lg-5 mt-md-4 mt-sm-2 mx-auto shadow rounded p-4">
+            <h1>Sign In Page</h1>
+            <a href="ass signup.html">
+                <button id="button1" class="form-control">SIGN UP</button>
+            </a>
+            <input type="text" placeholder="Enter Your Email" id="mail" class="form-control my-4">
+            <input type="password" placeholder="Password" id="pass" class="form-control my-4">
+            <input type="password" placeholder="Forgot Password?" id="forgot" class="form-control my-4">
+            <button id="button" onclick="signIn()" class="form-control my-5">Log In</button>
+        </div>
+        <script>
+            var allStudent = JSON.parse(localStorage.getItem("schoolPortal"))
+            console.log(allStudent)
+            function signIn(){
+                var userFound = false
+                for (var index = 0; index < allStudent.length; index++) {
+                    console.log(index)
+                    if(mail.value==allStudent[index].email && pass.value==allStudent[index].password){
+                        console.log(index)
+                        localStorage.setItem("userIndex",index)
+                    userFound = true
+                    break;
+                }
+            }
+                if(userFound==true){
+                    alert("user is found o")
+                    mail.value = ""
+                pass.value = ""
+                    window.location.href = "ass dashboard.html"
+                    console.log(allStudents)
+                }else{
+                    alert("user not found")
+                }
+                mail.value = ""
+                pass.value = ""
+            }
+        </script>
+    </body>
+</html>
